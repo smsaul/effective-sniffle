@@ -15,22 +15,23 @@ void setup() {
 void loop() {
   while(pooCount >= 0)
   {
-  if(digitalRead(SwitchPinUp) == LOW)
+    if(digitalRead(SwitchPinUp) == LOW)
     {
       pooCount = pooCount + 1;
       delay(200);
     }
-  lcd.setCursor(0,1);
-  lcd.print(pooCount);
-  if(digitalRead(SwitchPinDown) == LOW)
-   {
+    lcd.setCursor(0,1);
+    lcd.print(pooCount);
+
+    if(digitalRead(SwitchPinDown) == LOW)
+    {
       if(pooCount >= 1)
       {
         pooCount = pooCount - 1;
         delay(200);
       }
-   }
-   lcd.setCursor(0,1);
-   lcd.print(pooCount);
+      lcd.setCursor(0,1);
+      lcd.clearLine(1); /* should clear bottom line */
+      lcd.print(pooCount);
+    }
   }
-}
