@@ -9,7 +9,6 @@ void setup() {
   lcd.begin(16, 2);
   pinMode(SwitchPinUp, INPUT_PULLUP);
   pinMode(SwitchPinDown, INPUT_PULLUP);
-  Serial.begin(9600);
   lcd.print("Poos in Loos:");
 }
 
