@@ -31,8 +31,7 @@ void loop() {
         delay(200);
       }
       lcd.setCursor(0,1);
-      lcd.print("                "); /* should clear bottom line */
+      lcd.clearLine(1); /* should clear bottom line */
       lcd.print(pooCount);
     }
-   }
-}
+  }
