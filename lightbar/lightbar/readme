@@ -1,0 +1,12 @@
+This is code for a five-led flasher arranged similar to a lightbar. There are
+two red outside lights, an inside blue and yellow light, and a rapidly-flashing
+white middle light. The flash pattern is illustrated below, over one second.
+
+|  bbbb  |yyyy    |
+|rrrr  rr|rr      |
+| w w w  | w w w  |
+
+images of board and schematic can be found at https://imgur.com/a/rchFf
+a video of the pattern can be found at https://vimeo.com/253337481
+
+January 29, 2018
