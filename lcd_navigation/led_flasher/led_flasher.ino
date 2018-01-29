@@ -23,6 +23,7 @@ consider using variabke marh
 int index = 0;
 int ledCount = 1;
 int ledSpeed = 500;
+int ledLocation = ledCount + 6;
 int switchPinLeft = 3;
 int switchPinRight = 5;
 int switchPinReset = 6;
@@ -38,7 +39,7 @@ void setup() {
 void loop() {
   if(digitalRead(switchPinReset) == LOW)
   {
-    index = 0;
+    index = index - 1;
     lcd.setCursor(0,0);
     lcd.print("                ");
     lcd.setCursor(0,1);
@@ -54,7 +55,7 @@ void loop() {
     lcd.print("SPEED");
     if(digitalRead(switchPinLeft) == LOW)
     {
-      index = 1;
+      index = index + 1;
       lcd.setCursor(0,0);
       lcd.print("                ");
       lcd.setCursor(0,1);
@@ -78,20 +79,20 @@ void loop() {
     lcd.print("LESS");
     lcd.setCursor(10,1);
     lcd.print("MORE");
-    if(digitalRead(switchPinLeft) == LOW)
+    if(digitalRead(switchPinRight) == LOW)
     {
       if(ledCount >= 1 <= 5)
       {
-        lcd.setCursor((ledCount + 6), 0);
+        lcd.setCursor(ledLocation,0);
         lcd.print("X");
         ledCount = ledCount + 1;
       }
     }
-    if(digitalRead(switchPinRight) == LOW)
+    if(digitalRead(switchPinLeft) == LOW)
     {
       if(ledCount >= 1 < 5)
       {
-        lcd.setCursor((ledCount + 6), 1);
+        lcd.setCursor(ledLocation, 1);
         lcd.print(" ");
         ledCount = ledCount - 1;
       }
