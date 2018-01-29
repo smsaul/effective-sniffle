@@ -1,6 +1,6 @@
-//Define pins
-
 /*
+January 28, 2018
+github.com/smsaul/effective-sniffle/
 
 This is code for a five-led flasher arranged similar to a lightbar. There are
 two red outside lights, an inside blue and yellow light, and a rapidly-flashing
@@ -12,6 +12,8 @@ white middle light. The flash pattern is illustrated below, over one second.
 
 
 */
+
+//Define pins
 #define red_right 3
 #define blue 5
 #define white 6
