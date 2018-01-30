@@ -20,6 +20,18 @@ white middle light. The flash pattern is illustrated below, over one second.
 #define yellow 9
 #define red_left 10
 
+void redOff()
+{
+  digitalWrite(red_right, LOW);
+  digitalWrite(red_left, LOW);
+}
+
+void redOn()
+{
+  digitalWrite(red_right, HIGH);
+  digitalWrite(red_left, HIGH);
+}
+
 void setup()
 {
 pinMode(red_right, OUTPUT);
@@ -37,8 +49,7 @@ digitalWrite(red_left, LOW);
 void loop()
 {
   {
-    digitalWrite(red_right, HIGH);
-    digitalWrite(red_left, HIGH);
+    redOn();
     delay(125);
     digitalWrite(white, HIGH);
     delay(125);
@@ -47,23 +58,20 @@ void loop()
     delay(125);
     digitalWrite(white, HIGH);
     delay(125);
-    digitalWrite(red_right, LOW);
-    digitalWrite(red_left, LOW);
+    redOff();
     digitalWrite(white, LOW);
     delay(125);
     digitalWrite(white, HIGH);
     delay(125);
     digitalWrite(blue, LOW);
     digitalWrite(white, LOW);
-    digitalWrite(red_right, HIGH);
-    digitalWrite(red_left, HIGH);
+    redOn();
     delay(250);
     digitalWrite(yellow, HIGH);
     delay(125);
     digitalWrite(white, HIGH);
     delay(125);
-    digitalWrite(red_right, LOW);
-    digitalWrite(red_left, LOW);
+    redOff();
     digitalWrite(white,LOW);
     delay(125);
     digitalWrite(white, HIGH);
