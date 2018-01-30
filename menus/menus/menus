@@ -1,0 +1,29 @@
+void center_menu()
+{
+  lcd.print
+  if (digitalRead(button_left) == LOW)
+  {
+    menu_left();
+  }
+  if (digitalRead(button_right) == LOW);
+  {
+    menu_right();
+  }
+}
+
+void menu_left()
+{
+  lcd.print
+  if digitalRead(button_right) == LOW)
+  {
+    menu_center();
+  }
+
+void menu_right()
+{
+  lcd.print()
+  if (digitalRead(button_left) == LOW);
+  {
+    menu_center();
+  }
+}
