@@ -1,0 +1,9 @@
+Okay.
+
+lcd_navigation is my attempt to use three pushbuttons to navigate a 16x2 LCD. as it stands, it navigates to one menu (right button)
+but doesn't reset to the first menu (third button). i have no idea what im doing there.
+
+lightbar is a few flashing LEDs like a lightbar. its not fancy and takes no input. it is a completed project, no further updates
+will be made.
+
+pooCounter is a meme counter. it uses up and down buttons. it is considered completed, no further updates will be made.
